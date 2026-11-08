@@ -2,7 +2,8 @@
 title: "Don't Let Your AI Write Python"
 layout: post
 lang: en
-categories: [ai, programming, python, "vibe coding"]
+category: programming
+tags: [ai, programming, python]
 ---
 There is a trend to utilize LLM for coding these days, in Python or  some other programming languages. This article isn't about whether doing so is moral, lawful or secure, but what would be effective and efficient and what is not. And if you decide to use LLM this way, you should at least know what you are doing.
 
