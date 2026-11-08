@@ -24,7 +24,9 @@ The problem is, LLMs don't know to produce rare symbol combinations, and they ar
 
 Among programming languages, Python is very special for its syntax: it uses indentation, or the lack of indentation, to signal the end of a block.
 
-What's indentation? It means there are more spaces at the start of these lines than the lines before and after them. These lines starting with more spaces are considered *indented*, thus forming a block in Python.
+What's indentation? It means there are more spaces at the start of these lines than the lines before and after them.
+
+These lines starting with more spaces are considered *indented*, thus forming a block in Python.
 
 Consider the following code:
 
@@ -77,7 +79,7 @@ else:
     print(c + a)
 ```
 
-It should be kept in mind that a compiler, interpreter or tokenizer program doesn't have eyes; text is one-dimensional data to them, so the first step is to view the code as one-dimensional (`<br>` means linebreak):
+It should be kept in mind that a compiler, interpreter or tokenizer program doesn't have eyes; text is one-dimensional data to them, so the first step is to view the code as one-dimensional (`<br>` means linebreak here):
 
 ```txt
 a = 1<br>b = 2<br>if a >= b:<br>    c = a + b<br>    print(c - a)<br>else:<br>    c = b - a<br>    print(c + a)
@@ -107,11 +109,9 @@ Seeing this, one might think Python is a very inefficient programming language, 
 
 ### LLMs Don't Have Eyes
 
-This doesn't mean that LLMs are not capable of processing visual information; it just means that they will not use their GPU to process the picture of a Python source code file, and they are more likely to process it as one-dimensional data, whereas eyed human programmers would more likely process it as a 2D image: you see all lines at the same time, even if you read them one by one, and if there's indentation or outdentation, human eyes could recognize it easily: The visible part of an indented line starts at a different geometric position; and when reading code, indentation will not trouble these humans, because it is just a blank area.
+This doesn't mean that LLMs are not capable of processing visual information; it just means that they will not use their GPU to process the picture of a Python source code file, and they are more likely to process it as one-dimensional data, whereas eyed human programmers would more likely process it as a 2D image: you see all lines at the same time, even if you read them one by one, and if there's indentation or outdentation, human eyes could recognize it easily: The visible part of an indented line starts at a different geometric position. And when these eyed human programmers are reading code, indentation will not trouble them, because it is just a blank area to them.
 
 That's the secret. Python is a language designed for humans (or more exactly, beings capable of processing visual information efficiently), in a way that makes it unsuitable for non-humans (or beings not capable of processing visual information efficiently). It uses a repeatedly occurring character (space or tab) to signal a meaning, and the non-occurrence of this character signals that meaning.
-
-The character we used to ignore now became a token. This is why asking an LLM to code in Python might be inefficient.
 
 ### What Languages to Use Then?
 
@@ -119,4 +119,4 @@ My answer would be Ruby, Lua and Rust, while Dart, Java and Kotlin are also not 
 
 Ruby and Lua, on the other hand, are scripting languages designed to be close to natural languages but don't require indentation, and instead use explicit words to signal block ends.
 
-Python isn't useless. It is just too efficient for humans (or those that can process visual information efficiently and understand implication easily) but not for others.
+Python isn't useless. It is just efficient for humans (or those that can process visual information efficiently and understand implied information easily) but not for others.
